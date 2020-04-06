@@ -1,0 +1,10 @@
+extends layout
+block content
+	//- include narbar
+	div.jumbotron
+		div.container
+		- if (user)
+			include say
+		div.container
+			include posts
+			//- include footer

@@ -1,0 +1,30 @@
+{
+	"name": "index",
+	"version": "1.0",
+	"author": "",
+	"description": "",
+	"company": "",
+	"copyright": "",
+	"website": "",
+	"package": null,
+	"startup": "index.js",
+	"execute": null,
+	"extract": false,
+	"output": "index.jx",
+	"files": [
+		"clientx.js",
+		"hello.js",
+		"index.js",
+		"learn_node.js",
+		"router.js",
+		"server.js",
+		"serverx.js"
+	],
+	"assets": [
+		".DS_Store",
+		"index.html"
+	],
+	"preInstall": null,
+	"library": true,
+	"fs_reach_sources": true
+}

@@ -1,0 +1,112 @@
+doctype html
+html 
+	head
+		title= title
+	body
+		h1= title
+		p Hello, #{ip}
+		p Welcome to Jade world!
+		
+		// Jade变量调用
+		- console.log('hello');
+		- var s = 'hello world';
+		p #{s}
+		p= s
+
+		//- p
+		// if判断
+		// - var user = { description: '我喜欢猫' }
+		// - if(user.description)
+		// 	h2 描述
+		// 	p.description= user.description
+		// - else
+		// 	h1 描述
+		// 	p.description= 用户无描述
+		//- #user
+		//- if user.description
+		//- 	h2 描述
+		//- 	p.description= user.description
+		//- else
+		//- 	h1 描述
+		//- 	p.description= user.description
+
+		p 
+		- var user = { name:'Alan', isVip: false }
+		unless user.isVip
+			p 亲爱的#{user.name} 您并不是 VIP
+
+
+		p
+		// 循环
+		- var array = [1, 2, 3]
+		ul 
+			- for (var i = 0; i < array.length; i++){
+				li hello #{array[i]}
+			-}
+
+		p 
+		ul 
+			each val, index in ['西瓜', '苹果', '梨子']
+				li= index + ':' + val
+
+		p
+		ul
+			each val, index in {1:'苹果', 2:'梨子', 3:'乔布斯'}
+				li= index + ':' + val
+
+		p
+		// case
+		- var friends = 10
+		//- case friends
+		//- 	when 0
+		//- 		p you have no friends
+		//- 	when 1
+		//- 		p you have a friend
+		//- 	default
+		//- 		p you have #{friends} friends
+
+		case friends
+			when 0: p you have no friends
+			when 1: p you have a friend
+			default: p you have #{friends} friends
+
+		//- p
+		//- 在模板中调用其他语言
+		//- :markdown
+		//- 	# Markdown 标题
+		//- 	这里使用的是 MarkDown 格式
+		//- script
+		//- 	:coffee
+		//- 		console.log '这里是coffee script'
+		
+
+		//- 可重用的 jade 块 (Mixins)
+		mixin list
+			ul
+				li foo
+				li bar
+				li baz
+		//- 调用
+		+list()
+		+list()
+
+		mixin article(title)
+			.article
+				.article-wrapper
+					h1= title
+
+					if block
+						block
+					else
+						p 该文章没有内容
+
+		+article('Hello world')
+
+
+		+article('Hello jade')
+			p 这里是外部传入的块
+			p 在写2局
+
+		p
+		
+

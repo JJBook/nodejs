@@ -1,0 +1,21 @@
+extends base
+
+block js
+	script.
+
+block content
+	section(id="container")
+		header(class="header white-bg")
+			div(class="sidebar-toggle-box")
+				div(class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation")
+			a(href="http://127.0.0.1:3000/" class="logo") 打包
+				span 首页
+			div(class="top-nav")
+				ul(class="nav pull-right top-menu")
+					li
+						input(type="text" class="form-control search" placeholder="Search")
+					li(class="dropdown")
+						a(data-toggle="dropdown" class="dropdown-toggle" href="")
+							img(alt="" src="http://127.0.0.1:3000/getUserPhoto#{image}" style="width: 35px;")
+							span(class="username") #{username}
+							b(class="caret")

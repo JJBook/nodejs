@@ -1,0 +1,39 @@
+extends base
+
+block js
+	script.
+		$(document).ready(function(){
+			$("button").click(function(){
+				if ($("#email").val() == "") {
+					alert("邮件不能为空");
+				} else {
+					$.ajax({
+						url 		: "/sendEmail",
+						type 		: "POST",
+						data 		: { email : $("#email").val() },
+						dataType 	: 'json',
+						cache		: false,
+						success : function(data) {
+							if (data.status == 200) {
+								alert(data.message);
+							}
+						},
+						error   : function() {
+							alert("发送失败");
+						}
+					});
+				}
+			});
+		});
+
+block content
+	section(id="container" class="container" style="margin-top:100px;width:550px")
+		div(class="col-lg-12")
+			section(class="panel")
+				header(class="panel-heading") Send Email
+				div(class="panel-body")
+					div(class="form-group")
+						label(class="sr-only" for="exampleInputEmail2") Email address
+						input(type="email" class="form-control" id="email" name="email" placeholder="Enter email" required)
+					div(class="form-group")
+						button(type="submit" class="btn btn-success") Send

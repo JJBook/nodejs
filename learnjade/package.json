@@ -1,0 +1,22 @@
+{
+  "name": "learnjade",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "cookie-parser": "^1.4.3",
+    "debug": "^2.6.9",
+    "express": "^4.15.5",
+    "express-session": "^1.15.6",
+    "formidable": "^1.2.1",
+    "jade": "^1.11.0",
+    "mongo": "^0.1.0",
+    "morgan": "^1.8.2",
+    "nodemailer": "^4.6.3",
+    "nodemailer-smtp-transport": "^2.7.4",
+    "serve-favicon": "^2.4.5"
+  }
+}

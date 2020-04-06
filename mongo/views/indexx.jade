@@ -1,0 +1,74 @@
+doctype html
+html
+	//- include head
+	head
+		script.
+		
+body
+	//- h1 我的网站
+	//- p 欢迎来到我的网站
+	//- form(class='form-horizontal' method='post')
+	//- fieldset
+	//- 	legend 用户注册
+	//- 	div.control-group
+	//- 		label(class='control-label' for='username') 用户名
+	//- 			div.controls
+	//- 				input(type='text' class='input-xlarge' id='username' name='username')
+	//- 				p(class='help-block') 你的账户名称，用于登录和显示
+
+	//- 	div.control-group
+	//- 		label(class='control-label' for='sex') 性别
+	//- 			div.controls
+	//- 				label 男
+	//- 				input(type="radio" name="sex")
+	//- 				// 空格
+	//- 				&#12288 &#12288
+	//- 				label 女
+	//- 				input(type="radio" name="sex")
+	//- 				p
+
+	//- 	div.control-group
+	//- 		label(class='control-label' for='birthday') 出生日期：
+	//- 		div.controls
+	//- 			input(type="date" id="birthday" name="birthday" min="1900-01-01" max="" defaultValue="")
+	//- 			p
+
+	//- 	div.control-group
+	//- 		label(class='control-label' for='birthday') 兴趣爱好
+	//- 		div.controls
+	//- 			textarea(rows="5" name="fa")
+
+	//- 	table(cellpadding="15" frame="void" border="1" align="center")
+	//- 		tr
+	//- 			td 姓名：
+	//- 			td
+	//- 				input(type="text" id="username" name="username")
+	//- 		tr
+	//- 			td 性别：
+	//- 			td
+	//- 				label 男
+	//- 				input(type="radio" name="sex")
+	//- 				// 空格
+	//- 				&#12288 &#12288
+	//- 				label 女
+	//- 				input(type="radio" name="sex")
+	//- 		tr
+	//- 			td 出生日期：
+	//- 			td
+	//- 				input(type="date" id="birthday" name="birthday" min="1900-01-01" max="" defaultValue="")
+	//- 		tr
+	//- 			td 兴趣爱好：
+	//- 			td
+	//- 				textarea(rows="5" name="fa")
+	//- 		tr
+	//- 			td(colspan=2 align="center")
+	//- 				button(type='submit' class='btn btn-primary') 提交
+
+	h3 文件上传：
+	p 选择一个文件上传：
+	form(action="/file_upload" method="post" enctype="multipart/form-data")
+		input(type="file" name="image" size="50")
+		br
+		input(type="submit" value="上传文件")
+	hr
+	include foot

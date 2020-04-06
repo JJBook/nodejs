@@ -1,0 +1,36 @@
+doctype html
+
+html(lang="en")
+	head
+		// 添加jquery支持
+		script(src="/javascripts/jquery.min.js")
+		block meta
+			meta(charset="utf-8")
+			meta(name="viewport" content="width=device-width, initial-scale=1.0")
+			meta(name="description" content="")
+			meta(name="author" content="Mosaddek")
+			meta(name="keyword" content="FlatLab, Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina")
+		block link
+			<link rel="shortcut icon" href="/images/favicon.png">
+			link(href="/stylesheets/bootstrap.min.css" rel="stylesheet")
+			link(href="/stylesheets/bootstrap-reset.css" rel="stylesheet")
+			link(href="/assets/font-awesome/css/font-awesome.css" rel="stylesheet")
+			link(rel="stylesheet" type="text/css" href="/assets/bootstrap-datepicker/css/datepicker.css")
+			link(rel="stylesheet" type="text/css" href="/assets/bootstrap-colorpicker/css/colorpicker.css")
+			link(rel="stylesheet" type="text/css" href="/assets/bootstrap-daterangepicker/daterangepicker.css")
+			link(href="/stylesheets/slidebars.css" rel="stylesheet")
+			link(href="/stylesheets/style.css" rel="stylesheet")
+			link(href="/stylesheets/style-responsive.css" rel="stylesheet")
+			link(href="/assets/jquery-easy-pie-chart/jquery.easy-pie-chart.css" rel="stylesheet" type="text/css" media="screen")
+			link(rel="stylesheet" href="css/owl.carousel.css" type="text/css")
+			link(link href="css/slidebars.css" rel="stylesheet")
+			link(href="css/style-responsive.css" rel="stylesheet")
+		block title
+			title #{title}
+		block css
+		block js
+	body
+		block content
+		block footer
+			footer(style="margin-top:10px; position:absolute; bottom:0; width:100%; text-align:center;") 
+				p(style="text-align: center;") Copyright © 2018 JJ
